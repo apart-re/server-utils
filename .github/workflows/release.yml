@@ -1,0 +1,16 @@
+name: Lint, Test and Release
+
+on:
+  push:
+    branches:
+      - alpha
+      - beta
+  workflow_dispatch:
+
+jobs:
+  lint-and-test:
+    uses: apart-re/gh-action-templates/.github/workflows/lint-and-test.yml@main
+
+  release:
+    uses: apart-re/gh-action-templates/.github/workflows/release-library.yml@main
+    secrets: inherit
