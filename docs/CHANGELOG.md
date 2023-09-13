@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+## [1.0.2](https://github.com/apart-re/server-utils/compare/v1.0.1...v1.0.2) (2023-09-13)
+
+
+### 🐛 Bug Fixes
+
+* **package.json:** change node version ([a984d5b](https://github.com/apart-re/server-utils/commit/a984d5b22d336c39173610c3c56c66c5c8a14da4))
+
 ## [1.0.1](https://github.com/apart-re/server-utils/compare/v1.0.0...v1.0.1) (2023-09-12)
 
 
