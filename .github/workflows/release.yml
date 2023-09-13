@@ -14,3 +14,4 @@ jobs:
   release:
     uses: apart-re/gh-action-templates/.github/workflows/release-library.yml@main
     secrets: inherit
+    needs: lint-and-test
