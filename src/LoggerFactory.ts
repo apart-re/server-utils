@@ -41,7 +41,7 @@ export class LoggerFactory {
     loggerInstances.set(label, this);
   }
 
-  private getLoggerFormats = (label: string) => {
+  public getLoggerFormats = (label: string) => {
     const formatLabel = winston.format.label({
       label,
     });
@@ -56,7 +56,7 @@ export class LoggerFactory {
     return winston.format.combine(formatLabel, formatTimestamp, formatPrintf);
   };
 
-  private getLoggerTransports = () => {
+  public getLoggerTransports = () => {
     const debugTransport = new winstonDaily({
       level: "debug",
       datePattern: "YYYY-MM-DD",

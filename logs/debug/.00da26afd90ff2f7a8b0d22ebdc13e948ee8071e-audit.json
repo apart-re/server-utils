@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/otedesco/PersonalProjects/Apart/packages/server-utils/logs/debug/.00da26afd90ff2f7a8b0d22ebdc13e948ee8071e-audit.json",
+    "files": [
+        {
+            "date": 1695427890024,
+            "name": "/Users/otedesco/PersonalProjects/Apart/packages/server-utils/logs/debug/2023-09-22.log",
+            "hash": "b95b91d87cc531ef9f87b28ee2ebfd546e7c4f54e2f9d491968d0a70425d19d2"
+        }
+    ],
+    "hashType": "sha256"
+}

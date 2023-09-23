@@ -5,6 +5,7 @@ import express, { Application, json, urlencoded } from "express";
 import expressListRoutes from "express-list-routes";
 import helmet from "helmet";
 import hpp from "hpp";
+import _ from "lodash";
 import morgan from "morgan";
 
 import { ConfigOptions } from "./interfaces";
@@ -69,11 +70,9 @@ abstract class AppFactory {
   private initializeRoutes(apiRoutes: ConfigOptions["routes"]): void {
     this.logger.info("Loading routes...");
     this.app.use("/health", (_req, res) => res.status(200).send("Ok"));
+
     apiRoutes.forEach(({ version, routes }) => {
-      this.app.use(
-        version,
-        routes.map(({ router }) => router),
-      );
+      this.app.use(version, _.map(routes, "router"));
     });
 
     expressListRoutes(this.app);
