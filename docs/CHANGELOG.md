@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+## [1.1.0](https://github.com/apart-re/server-utils/compare/v1.0.3...v1.1.0) (2024-04-18)
+
+
+### 🍕 Features
+
+* **appfactory:** implement lodash and change some implementations ([c7b91fd](https://github.com/apart-re/server-utils/commit/c7b91fd98b8b1bb9cd4c8968239721ce65a1b29d))
+
 ## [1.0.3](https://github.com/apart-re/server-utils/compare/v1.0.2...v1.0.3) (2024-04-18)
 
 
