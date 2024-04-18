@@ -5,6 +5,17 @@
 
 > All notable changes to this project will be documented in this file
 
+## [1.1.1](https://github.com/apart-re/server-utils/compare/v1.1.0...v1.1.1) (2024-04-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **interfaces:** Imports was not working for interfaces
+
+### 🐛 Bug Fixes
+
+* **interfaces:** change file names ([c20884c](https://github.com/apart-re/server-utils/commit/c20884cf87797c8e6c87198f9175bbdbc78c6baa))
+
 ## [1.1.0](https://github.com/apart-re/server-utils/compare/v1.0.3...v1.1.0) (2024-04-18)
 
 
