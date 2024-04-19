@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test } from "vitest";
-import winston from "winston";
+import { Logger } from "winston";
 
 import { LoggerFactory } from "../LoggerFactory";
 
@@ -17,7 +17,7 @@ describe("LoggerFactory Module", () => {
   });
 
   test("constructor initializes logger correctly", () => {
-    expect(loggerFactory.logger).toBeInstanceOf(winston.Logger);
+    expect(loggerFactory.logger).toBeInstanceOf(Logger);
   });
 
   test("logger formats are set correctly", () => {

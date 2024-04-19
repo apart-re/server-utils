@@ -25,14 +25,6 @@ abstract class AppFactory {
     this.port = config.port ?? 3000;
     this.logger = config.logger;
 
-    this.initializeConnections()
-      .then(() => {
-        this.logger.info("Connections initialized");
-      })
-      .catch((err) => {
-        this.logger.error("An Error has occurred during connection init");
-        throw err;
-      });
     this.initializeExpressMiddlewares({
       logFormat: config.logFormat,
       cors: config.cors,
@@ -67,10 +59,9 @@ abstract class AppFactory {
     this.logger.info("Default middlewares loaded");
   }
 
-  private initializeRoutes(apiRoutes: ConfigOptions["routes"]): void {
+  initializeRoutes(apiRoutes: ConfigOptions["routes"]): void {
     this.logger.info("Loading routes...");
     this.app.use("/health", (_req, res) => res.status(200).send("Ok"));
-
     apiRoutes.forEach(({ version, routes }) => {
       this.app.use(version, _.map(routes, "router"));
     });
@@ -79,9 +70,17 @@ abstract class AppFactory {
     this.logger.info("Routes loaded");
   }
 
-  protected abstract initializeConnections(): Promise<void>;
-
   protected abstract initializeErrorHandling(): void;
+
+  public async initializeConnections(resolver: Promise<void>) {
+    try {
+      await resolver;
+      this.logger.info("Connections initialized");
+    } catch (err) {
+      this.logger.error("An Error has occurred during connection init");
+      throw err;
+    }
+  }
 
   public listen() {
     this.app.listen(this.port, () => {
