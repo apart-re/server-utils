@@ -5,6 +5,17 @@
 
 > All notable changes to this project will be documented in this file
 
+## [1.2.0](https://github.com/apart-re/server-utils/compare/v1.1.1...v1.2.0) (2024-04-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **appfactory:** initialize connection method implementation was modified
+
+### 🍕 Features
+
+* **appfactory:** clean code and implement tests ([a2e1f3e](https://github.com/apart-re/server-utils/commit/a2e1f3e88e83e9283fe3b7008c26aa245164bd77))
+
 ## [1.1.1](https://github.com/apart-re/server-utils/compare/v1.1.0...v1.1.1) (2024-04-18)
 
 
